@@ -13,7 +13,7 @@ namespace TQA.NET
         public String Id { get; set; }
 
         [JsonProperty(PropertyName = "machineId")]
-        public String MachineId { get; set; }
+        public int MachineId { get; set; }
 
         [JsonProperty(PropertyName = "templateId")]
         public String TemplateId { get; set; }

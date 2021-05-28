@@ -9,6 +9,9 @@ namespace TQA.NET
 {
     public class Template
     {
+        [JsonProperty(PropertyName = "id")]
+        public int Id { get; set; }
+
         [JsonProperty(PropertyName = "name")]
         public String Name { get; set; }
 
@@ -18,10 +21,16 @@ namespace TQA.NET
         [JsonProperty(PropertyName = "active")]
         public bool IsActive { get; set; }
 
-        [JsonProperty(PropertyName = "deviceTypes")]
-        public DeviceType[] DeviceTypes { get; set; }
+        [JsonProperty(PropertyName = "owner")]
+        public String Owner { get; set; }
 
         [JsonProperty(PropertyName = "tests")]
         public Test[] Tests { get; set; }
+
+        [JsonProperty(PropertyName = "deviceTypes")]
+        public DeviceType[] DeviceTypes { get; set; }
+
+        [JsonProperty(PropertyName = "allowDeviceTypeOther")]
+        public bool AllowDeviceTypeOther { get; set; }
     }
 }

@@ -45,12 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeviceType.cs" />
+    <Compile Include="Machine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs" />
     <Compile Include="Site.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="TQAClient.cs" />
+    <Compile Include="TQADateTime.cs" />
     <Compile Include="TResponse.cs" />
   </ItemGroup>
   <ItemGroup>

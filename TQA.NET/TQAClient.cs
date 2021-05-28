@@ -13,7 +13,7 @@ namespace TQA.NET
 {
     public class TQAClient : HttpClient
     {
-        private Uri baseAddress = new Uri("http://tqa.imageowl.com/");
+        private Uri baseAddress = new Uri("https://tqa.imageowl.com/");
         const string JSON = "application/json";
         private string accessToken = "";
 
@@ -73,7 +73,15 @@ namespace TQA.NET
             if (templates.IsSuccess) { return templates.Response; }
             throw new Exception("Couldn't get templates");
         }
-
+        public async Task<List<Machine>> GetMachines()
+        {
+            var machines = await TryGet("api/rest/machines", (resp) =>
+            {
+                return JsonConvert.DeserializeAnonymousType(resp, new { machines = new Machine[0] }).machines.ToList();
+            });
+            if (machines.IsSuccess) { return machines.Response; }
+            throw new Exception("Couldn't get machines");
+        }
         #region CLIENT PLUMBING
         private async Task<TResponse<T>> TryGet<T>(string apiAddress, Func<string, T> responseFunction) where T : new()
         {
