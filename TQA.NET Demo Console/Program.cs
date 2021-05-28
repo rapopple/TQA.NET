@@ -5,23 +5,28 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using TQA.NET;
 
 namespace TQA.NET_Console
 {
     class Program
     {
-        static string tokenName = "209:uab_testToken";
-        static string tokenValue = "0a8c7c2fc3202ca0a350789893804b223c55ab6cab3cea61f1b71c48a279bea8";
-
         static void Main(string[] args)
         {
+            var config = new ConfigurationBuilder()
+            .AddUserSecrets<Program>()
+            .Build();
+
+            string tokenName = config["TQA:ApiClient"];
+            string tokenValue = config["TQA:ApiKey"];
+
             var client = new TQAClient();
             var success = client.Login(tokenName, tokenValue).Result;
 
             if (success)
             {
-               
+
 
                 //LIST ALL SITES
                 var sites = client.GetSites().Result;
@@ -59,7 +64,7 @@ namespace TQA.NET_Console
                 var machine = machines.Where(m => m.Name == "Test Linac" && m.SiteId == testsite.ID).Single();
                 var template = templates.Where(t => t.Name == "TSET_Dosimetry_Daily_v1").Single();
                 var schedule = schedules.Where(s => s.MachineId == machine.Id && s.Name == "TSET Daily Dosimetry").Single();
-                foreach 
+                
 
             }
             else

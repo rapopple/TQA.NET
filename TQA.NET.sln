@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQA.NET", "TQA.NET\TQA.NET.csproj", "{361DDF2F-D12B-4D84-BEA7-EC1D4A9D1C4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TQA.NET Console", "TQA.NET Console\TQA.NET Console.csproj", "{23B95D8E-98AA-40B8-9941-CB79912DB6FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TQA.NET Demo Console", "TQA.NET Demo Console\TQA.NET Demo Console.csproj", "{DC1A3F0D-1189-4A9F-86D7-86512DA280C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,15 @@ Global
 		{361DDF2F-D12B-4D84-BEA7-EC1D4A9D1C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{361DDF2F-D12B-4D84-BEA7-EC1D4A9D1C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{361DDF2F-D12B-4D84-BEA7-EC1D4A9D1C4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23B95D8E-98AA-40B8-9941-CB79912DB6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23B95D8E-98AA-40B8-9941-CB79912DB6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23B95D8E-98AA-40B8-9941-CB79912DB6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23B95D8E-98AA-40B8-9941-CB79912DB6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1A3F0D-1189-4A9F-86D7-86512DA280C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1A3F0D-1189-4A9F-86D7-86512DA280C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1A3F0D-1189-4A9F-86D7-86512DA280C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1A3F0D-1189-4A9F-86D7-86512DA280C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14B9AEFA-CE22-4926-A80C-880EAC6BC7DD}
 	EndGlobalSection
 EndGlobal
